@@ -1,0 +1,25 @@
+{
+    "name": "tutorial005",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Learn Webpack",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/leihuagh/Learn-Webpack-from-Book.git"
+    },
+    "keywords": [],
+    "author": "Lei Hua",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/leihuagh/Learn-Webpack-from-Book/issues"
+    },
+    "homepage": "https://github.com/leihuagh/Learn-Webpack-from-Book#readme",
+    "devDependencies": {
+        "webpack": "^4.33.0",
+        "webpack-cli": "^3.3.2"
+    }
+}
