@@ -6,6 +6,7 @@ const webpackConfig = {
         host: process.env.HOST, // Default to `localhost`
         port: process.env.PORT, // Default to 8080
         open: true,
+        overlay: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
