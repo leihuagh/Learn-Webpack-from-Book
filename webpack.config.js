@@ -3,12 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const parts = require("./webpack.parts")
 
 const baseConfig = merge([{
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: "Webpack Demo"
-        }),
-    ],
-}])
+        plugins: [
+            new HtmlWebpackPlugin({
+                title: "Webpack Demo"
+            }),
+        ],
+    },
+    parts.loadCSS()
+])
 
 const productionConfig = merge([])
 
