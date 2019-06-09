@@ -55,6 +55,19 @@ exports.extractCSS = ({
 
 const PurifyCSSPlugin = require("purifycss-webpack")
 
-exports.purifyCSS = ({ paths }) => ({
-  plugins: [new PurifyCSSPlugin({ paths })],
+exports.purifyCSS = ({
+    paths
+}) => ({
+    plugins: [new PurifyCSSPlugin({
+        paths
+    })],
+})
+
+exports.autoprefix = () => ({
+    loader: "postcss-loader",
+    options: {
+        plugins: () => [
+            require("autoprefixer")()
+        ],
+    },
 })
