@@ -1,6 +1,11 @@
+const path = require("path")
+const glob = require("glob")
 const merge = require("webpack-merge")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const parts = require("./webpack.parts")
+const PATHS = {
+    app: path.join(__dirname, "src")
+}
 
 const baseConfig = merge([{
         plugins: [
@@ -15,6 +20,11 @@ const baseConfig = merge([{
 const productionConfig = merge([
     parts.extractCSS({
         use: "css-loader",
+    }),
+    parts.purifyCSS({
+        paths: glob.sync(`${PATHS.app}/**/*.js`, {
+            nodir: true
+        }),
     }),
 ])
 
